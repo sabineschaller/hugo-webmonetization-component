@@ -51,6 +51,18 @@ The last part is a bit more tricky. You need to add the partial to the `head` of
     </head>
     ```
 
+## How to have different payment pointers for different pages
+In some cases you may want to have a different payment pointer for each page, e.g. when you are writing a blog together with other people. You can define a different payment pointer, different from the one defined in the `config.toml`, in every markdown file by adding it to the markdown head.
+```md
+---
+title: "My First Post"
+date: 2020-01-09T21:45:39+01:00
+draft: true
+monetization: "$twitter.xrptipbot.com/WietseWind"
+---
+```
+Now, every individual blogger gets credit for their content. Moreover, you may even omit the payment pointer in the `config.toml` to only have individual blog posts web monetized. 
+
 ## TODO:
 - [ ] Exclusive content
-- [ ] Multiple payment pointers
+- [x] Multiple payment pointers

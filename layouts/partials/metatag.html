@@ -1,1 +1,14 @@
-<meta name="monetization" content='{{ $.Site.Params.monetization }}'>
+{{ if .IsPage }}
+  {{ if .Params.monetization}}
+    <meta name="monetization" content='{{ .Params.monetization }}'>
+  {{ else }}
+    {{ if .Site.Params.monetization}}
+      <meta name="monetization" content='{{ .Site.Params.monetization }}'>
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ if .Site.Params.monetization}}
+    <meta name="monetization" content='{{ .Site.Params.monetization }}'>
+  {{ end }}
+{{ end }}
+
