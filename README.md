@@ -28,7 +28,7 @@ Additionally, add your [payment pointer](https://paymentpointers.org/) in the `p
 
 The last part is a bit more tricky. You need to add the partial to the `head` of your website. Depending on how your main theme is set up, the location may be different. Here are two possibilities:
 
-1. There is a `<YOUR-MAIN-THEME>/layouts/partials/head.html` or `layouts/partials/head/head.html`:
+1. There is a `<YOUR-MAIN-THEME>/layouts/partials/head.html` or `<YOUR-MAIN-THEME>/layouts/partials/head/head.html`:
 
     Include the partial in the bottom of `head.html`:
     ```html
