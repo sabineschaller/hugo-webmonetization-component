@@ -1,0 +1,12 @@
+name = "Webmonetization"
+license = "MIT"
+licenselink = "https://github.com/sabinebertram/hugo-webmonetization-component/blob/master/LICENSE"
+description = "Hugo theme component with the 'webmonetization' partial enabling web monetization."
+homepage = "https://github.com/sabinebertram/hugo-webmonetization-component"
+tags = ["webmonetization", "interledger"]
+features = ["webmonetization"]
+min_version = "0.59.1"
+
+[author]
+    name = "Sabine Bertram"
+    homepage = "https://github.com/sabinebertram"
