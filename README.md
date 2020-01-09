@@ -26,18 +26,22 @@ Additionally, add your [payment pointer](https://paymentpointers.org/) in the `p
   monetization = "$twitter.xrptipbot.com/sabinebertram_"
 ```
 
-The last part is a bit more tricky. You need to add the partial to the `head` of your website. Depending on how your main theme is set up, the location may be different. Here are two possibilities:
+The last part is a bit more tricky. You need to add the partial to the `head` of your website. Because you don't want to mess with the actual theme, you need to create a file that overwrites the file that is defining the `head`, usually a file called `baseof.html` or a partial called `head.html`. Depending on how your main theme is set up, the location may be different. Here are two possibilities:
 
-1. There is a `<YOUR-MAIN-THEME>/layouts/partials/head.html` or `<YOUR-MAIN-THEME>/layouts/partials/head/head.html`:
+1. There is a partial called `head.html`, usually in `themes/<YOUR-MAIN-THEME>/layouts/partials/` or `themes/<YOUR-MAIN-THEME>/layouts/partials/head/`:
 
-    Include the partial in the bottom of `head.html`:
+    a) Create a file in `layouts/partials/` called `head.html` and copy the contents from `themes/<YOUR-MAIN-THEME>/layouts/partials/head.html` or `themes/<YOUR-MAIN-THEME>/layouts/partials/head/head.html`.
+
+    b) Include the web monetization partial in the bottom of this new `head.html`:
     ```html
     {{ partial "webmonetization.html" .}}
     ```
 
-2. The `head` is defined in `<YOUR-MAIN-THEME>/layouts/_default/baseof.html`
+2. The `head` is defined in `themes/<YOUR-MAIN-THEME>/layouts/_default/baseof.html`:
 
-    Include the partial within the `head` tag:
+    a) Create a file in `layouts/` called `baseof.html` and copy the contents from `themes/<YOUR-MAIN-THEME>/layouts/_default/baseof.html`
+
+    b) Include the partial within the `head` tag:
     ```html
     <head>
 
