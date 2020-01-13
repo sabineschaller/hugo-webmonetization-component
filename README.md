@@ -87,10 +87,10 @@ Additionally, you have to set your markdown renderer in your `config.toml` to `b
 ```
 
 This is how locked content is displayed:
-![No web monetization](screenshots/nowebmo.png)
+<kbd><img src="screenshots/nowebmo.png" alt="No web monetization"/></kbd>
 
 This is how unlocked exclusive content is displayed:
-![No web monetization](screenshots/webmo.png)
+<kbd><img src="screenshots/webmo.png" alt="Web monetization enabled"/></kbd>
 
 **Note that the exclusive content is only hidden to the non-tech-savvy users.** Those that know how to access the DOM will find it. This is due to the fact that Hugo is a static website generator and content is not stored on some server. 
 
