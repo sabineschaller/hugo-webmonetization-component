@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+window.onload = function(){
+
+  var monetizationStartEventOccurred = false
+  hideContent()
+
+  if (document.monetization){
+    document.monetization.addEventListener('monetizationstart', function(event){
+      monetizationStartEventOccurred = true
+      showContent()
+    });
+  } else {
+    hideContent()
+  }
+
+  function hideContent() {
+    document.getElementById("exclusiveThanks").style.display = 'none'
+    document.getElementById("exclusiveError").style.display = 'block'
+    document.getElementById("exclusive").style.display = 'none'
+  }
+
+  function showContent() {
+    document.getElementById("exclusiveThanks").style.display = 'block'
+    document.getElementById("exclusiveError").style.display = 'none'
+    document.getElementById("exclusive").style.display = 'block'
+  }
+}
+</script>

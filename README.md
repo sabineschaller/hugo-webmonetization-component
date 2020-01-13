@@ -63,6 +63,38 @@ monetization: "$twitter.xrptipbot.com/WietseWind"
 ```
 Now, every individual blogger gets credit for their content. Moreover, you may even omit the payment pointer in the `config.toml` to only have individual blog posts web monetized. 
 
+## How to create exclusive content
+
+If you want to hide parts of your website that should only be visible to users that have web monetization enabled, you can do so by enframing this part with the `{{% exclusive %}}` and `{{% /exclusive %}}` tags. For example
+```markdown
+## Free content
+
+This content is free, everybody can read it.
+
+## Exclusive content
+
+{{% exclusive %}}
+
+This content is exclusive. Only users with web monetization enabled can view read it.
+
+{{% /exclusive %}}
+```
+
+Additionally, you have to set your markdown renderer in your `config.toml` to `blackfriday`:
+```toml
+[markup]
+  defaultMarkdownHandler = "blackfriday"
+```
+
+This is how locked content is displayed:
+![No web monetization](screenshots/nowebmo.png)
+
+This is how unlocked exclusive content is displayed:
+![No web monetization](screenshots/webmo.png)
+
+**Note that the exclusive content is only hidden to the non-tech-savvy users.** Those that know how to access the DOM will find it. This is due to the fact that Hugo is a static website generator and content is not stored on some server. 
+
 ## TODO:
-- [ ] Exclusive content
 - [x] Multiple payment pointers
+- [x] Exclusive content
+- [ ] Custom message for exclusive content
