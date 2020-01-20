@@ -1,6 +1,6 @@
 {{ if .IsPage }}
-  {{ if .Params.monetization}}
-    <meta name="monetization" content='{{ .Params.monetization }}'>
+  {{ if .Site.Params.monetization}}
+    <meta name="monetization" content='{{ .Site.Params.monetization }}'>
   {{ else }}
     {{ if .Site.Params.monetization}}
       <meta name="monetization" content='{{ .Site.Params.monetization }}'>
