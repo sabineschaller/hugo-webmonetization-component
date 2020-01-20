@@ -94,7 +94,27 @@ This is how unlocked exclusive content is displayed:
 
 **Note that the exclusive content is only hidden to the non-tech-savvy users.** Those that know how to access the DOM will find it. This is due to the fact that Hugo is a static website generator and content is not stored on some server. 
 
+## How to add custom messages to exclusive content
+
+The standard messages are 
+<kbd><img src="screenshots/standardFalse.png" alt="No web monetization enabled"/></kbd>
+and
+<kbd><img src="screenshots/standardTrue.png" alt="Web monetization enabled"/></kbd>
+
+You can add custom messages by setting the parameters `exclusiveThanks` and `exclusiveError` in the `params` section of your `config.toml`:
+```toml
+[params]
+  monetization = "$twitter.xrptipbot.com/sabinebertram_"
+  exclusiveError = "The part below requires web monetization to be enabled."
+  exclusiveThanks = "You rock!"
+```
+Now, the messages are the following:
+<kbd><img src="screenshots/customFalse.png" alt="No web monetization enabled"/></kbd>
+and
+<kbd><img src="screenshots/customTrue.png" alt="Web monetization enabled"/></kbd>
+
 ## TODO:
 - [x] Multiple payment pointers
 - [x] Exclusive content
-- [ ] Custom message for exclusive content
+- [x] Custom message for exclusive content
+- [ ] Possibility to add a banner that shows that the page is web monetized.
