@@ -10,7 +10,7 @@ window.onload = function(){
     document.querySelector('link[rel="monetization"]')
 
   if (link.relList.supports('monetization')){
-    document.addEventListener('monetization', function(event){
+    link.addEventListener('monetization', function(event){
       monetizationStartEventOccurred = true
       showContent()
     });
