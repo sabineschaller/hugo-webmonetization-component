@@ -6,8 +6,11 @@ window.onload = function(){
   var monetizationStartEventOccurred = false
   hideContent()
 
-  if (document.monetization){
-    document.monetization.addEventListener('monetizationstart', function(event){
+  const link =
+    document.querySelector('link[rel="monetization"]')
+
+  if (link.relList.supports('monetization')){
+    document.addEventListener('monetization', function(event){
       monetizationStartEventOccurred = true
       showContent()
     });
@@ -16,15 +19,15 @@ window.onload = function(){
   }
 
   function hideContent() {
-    document.getElementById("exclusiveThanks").style.display = 'none'
-    document.getElementById("exclusiveError").style.display = 'block'
-    document.getElementById("exclusive").style.display = 'none'
+    document.getElementById("exclusiveThanks")?.style.display = 'none'
+    document.getElementById("exclusiveError")?.style.display = 'block'
+    document.getElementById("exclusive")?.style.display = 'none'
   }
 
   function showContent() {
-    document.getElementById("exclusiveThanks").style.display = 'block'
-    document.getElementById("exclusiveError").style.display = 'none'
-    document.getElementById("exclusive").style.display = 'block'
+    document.getElementById("exclusiveThanks")?.style.display = 'block'
+    document.getElementById("exclusiveError")?.style.display = 'none'
+    document.getElementById("exclusive")?.style.display = 'block'
   }
 }
 </script>
