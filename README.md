@@ -10,7 +10,7 @@ This component adds a partial including the "monetization" `meta` tag and the pa
 
 Add the component as second theme to your hugo site:
 
-```
+```bash
 git submodule add git@github.com:sabinebertram/hugo-webmonetization-component.git themes/webmonetization
 ```
 
