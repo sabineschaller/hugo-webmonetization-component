@@ -1,0 +1,14 @@
+{{ if .IsPage }}
+  {{ if .Params.monetization}}
+    <link rel='monetization' href='{{ .Params.monetization }}' />
+  {{ else }}
+    {{ if .Site.Params.monetization}}
+    <link rel='monetization' href='{{ .Site.Params.monetization }}' />
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ if .Site.Params.monetization}}
+  <link rel='monetization' href='{{ .Site.Params.monetization }}' />
+  {{ end }}
+{{ end }}
+
